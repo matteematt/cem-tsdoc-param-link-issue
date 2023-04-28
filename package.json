@@ -3,18 +3,19 @@
 	"scripts": {
 		"serve": "http-server -c-1 ./public",
 		"build": "mkdir -p out && ./node_modules/typescript/bin/tsc -p src && webpack --config webpack.config.js",
-		"lsp:analyse": "customelements-analyse --src='src/**/*.{js,ts}'"
+		"cem:analyze": "custom-elements-manifest analyze --config custom-elements-manifest.config.js"
 	},
 	"dependencies": {
 		"@microsoft/fast-components": "2.21.3",
 		"@microsoft/fast-element": "1.11.0",
 		"@microsoft/fast-foundation": "2.47.0",
-		"webcomponents-lsp-plugin": "file:..",
 		"tslib": "^2.4.1",
 		"typescript": "^4.4.3",
+		"webcomponents-lsp-plugin": "file:..",
 		"webpack": "^5.70.0"
 	},
 	"devDependencies": {
+		"@custom-elements-manifest/analyzer": "^0.8.0",
 		"html-webpack-plugin": "^5.5.1",
 		"webpack-cli": "^4.9.2"
 	}
