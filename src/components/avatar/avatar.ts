@@ -7,6 +7,7 @@ import {
 } from "@microsoft/fast-element";
 import { avatarStyles } from "./avatar.styles";
 import { avatarTemplate } from "./avatar.template";
+import { testItem, TestType } from "./test";
 
 const defaultAvatarSrc =
   "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light";
@@ -19,6 +20,14 @@ const defaultAvatarSrc =
 export class Avatar extends FASTElement {
   @observable showFullInfo = false;
   @attr({ attribute: "avatar-src" }) avatarSrc: string = defaultAvatarSrc;
-  @attr({mode: "boolean"}) fullInfoDisabled: boolean = false;
-}
+  @attr({ mode: "boolean" }) fullInfoDisabled: boolean = false;
 
+  /**
+   * @param fruit - {@link TestType} - This is a test param
+   * @param fruit - {@link test} - This is a test param
+   */
+  logFruit(fruit: TestType) {
+    console.log(fruit);
+    console.log(testItem);
+  }
+}

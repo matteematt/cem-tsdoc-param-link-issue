@@ -14,7 +14,6 @@ const rootTemplate = html`
       <h1 slot="title">Full info disabled</h1>
     </person-avatar>
 
-    <invalid-component></invalid-component>
   </template>
 `;
 
