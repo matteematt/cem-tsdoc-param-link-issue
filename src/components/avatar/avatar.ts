@@ -23,9 +23,29 @@ export class Avatar extends FASTElement {
   @attr({ mode: "boolean" }) fullInfoDisabled: boolean = false;
 
   /**
-   * @param fruit - {@link TestType} - This is a test param
-   * @param fruit - {@link test} - This is a test param
+   * entityID used to display label from the selector of entityID {@link Users.entityColumn} function.
+   * @internal
    */
+  @attr resourceName = 'ALL_USERS';
+
+  /**
+   * entityID used to control the definition of an optional entity column which is created with the {@link Users.entityColumn} function.
+   * @internal
+   */
+  @attr entityID: string = 'COUNTERPARTY_ID';
+
+  /**
+   * entityID used to display label from the selector of entityID {@link Users.entityColumn} function.
+   * @internal
+   */
+  @attr entityLabelKey: string = 'NAME';
+
+  /**
+   * entityID used to control the definition of an optional entity column which is created with the {@link Users.entityColumn} function.
+   * @internal
+   */
+  @attr entityLabel: string = 'Counterparty';
+
   logFruit(fruit: TestType) {
     console.log(fruit);
     console.log(testItem);
